@@ -1,0 +1,17 @@
+PODS:
+  - Kingfisher (4.1.0)
+  - Siesta (1.3.0):
+    - Siesta/Core (= 1.3.0)
+  - Siesta/Core (1.3.0)
+
+DEPENDENCIES:
+  - Kingfisher (~> 4.0)
+  - Siesta (= 1.3.0)
+
+SPEC CHECKSUMS:
+  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  Siesta: 90cb487ebcabdc1ee0201842f027cd37df2532be
+
+PODFILE CHECKSUM: 28f724df9695316eff29a454bcc169c265cf6dd6
+
+COCOAPODS: 1.0.1
