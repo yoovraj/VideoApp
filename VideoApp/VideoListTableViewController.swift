@@ -2,24 +2,61 @@
 //  VideoListTableViewController.swift
 //  VideoApp
 //
-//  Created by Shinde, Yoovraj | Yubi | ECID on 2018/02/24.
+//  Created by Shinde, Yoovraj
 //  Copyright © 2018 Yoovraj Shinde. All rights reserved.
 //
 
 import UIKit
+import MobilePlayer
 
 class VideoListTableViewController: UITableViewController {
     
     var videoList:[Video] = []
+    let reUseIdentifier = "VideoTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Video List table"
+        view.backgroundColor = UIColor.lightGray
+        tableView.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0)
+        
+//        tableView.translatesAutoresizingMaskIntoConstraints = false
+//        if #available(iOS 11.0, *) {
+//            tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+//            tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+//            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+//            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+//        } else {
+//            // Fallback on earlier versions
+//            let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+//            tableView.leftAnchor.constraint(equalTo: view.layoutMarginsGuide.leftAnchor).isActive = true
+//            tableView.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor).isActive = true
+//            tableView.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor, constant: statusBarHeight).isActive = true
+//            tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor).isActive = true
+//        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView .register(UINib(nibName: "VideoTableViewCell", bundle: nil),
+                            forCellReuseIdentifier: reUseIdentifier)
+        
+        tableView.rowHeight =  UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 150
+        
+        VideoListApi().getList { (fetchedArray) in
+            self.videoList = fetchedArray
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        tableView.contentInset = UIEdgeInsetsMake(14, 0, 0, 10)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,24 +68,31 @@ class VideoListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return videoList.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: reUseIdentifier, for: indexPath) as! VideoTableViewCell
+        
+        
         // Configure the cell...
-
+        cell.populate(video: videoList[indexPath.row])
         return cell
     }
-    */
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let video = videoList[indexPath.row]
+        let videoURL = URL(string: video.video_url)
+        let playerVC = MobilePlayerViewController(contentURL: videoURL!)
+        playerVC.title = video.title
+        playerVC.activityItems = [video.video_url]
+        present(playerVC, animated: true, completion: nil)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -95,8 +139,10 @@ class VideoListTableViewController: UITableViewController {
     */
 
     func populateVideoTableViewCellwith(video:Video) -> VideoTableViewCell {
-        var videoTableViewCell = VideoTableViewCell()
-        
+        let videoTableViewCell = VideoTableViewCell()
+        videoTableViewCell.populate(video: video)
         return videoTableViewCell
     }
+
 }
+

@@ -21,7 +21,7 @@ class VideoListApi: NSObject {
         let url = URL(string: "https://gist.githubusercontent.com/sa2dai/04da5a56718b52348fbe05e11e70515c/raw/c7bb2472537f4527f9640e456eee3337139f7656/code_test_iOS.json")
         let urlRequest = URLRequest(url: url!,
                                     cachePolicy: .reloadIgnoringLocalCacheData,
-                                    timeoutInterval: 1.0)
+                                    timeoutInterval: 5.0)
         urlSession.dataTask(with: urlRequest)
         dataTask = urlSession.dataTask(with: urlRequest) { (data, response, error) in
             // after completion handler gets finished set datatask to nil
@@ -39,7 +39,7 @@ class VideoListApi: NSObject {
                         //print(dataJson)
                         var videoArray:[Video] = []
                         for case let videoJson in dataJson {
-                            if let video = Video(json: (videoJson as? [String:Any])!) {
+                            if let video = Video(json: (videoJson as? [String:Any])! as [String : AnyObject]) {
                                 videoArray.append(video)
                             }
                         }

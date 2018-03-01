@@ -10,9 +10,7 @@
 		62EB0628D1B3E560A87E533D /* Pods_VideoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317CB75AF4799873293B1A32 /* Pods_VideoAppTests.framework */; };
 		ACC6247E2040F2BF002A6F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6247D2040F2BF002A6F38 /* AppDelegate.swift */; };
 		ACC624802040F2BF002A6F38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6247F2040F2BF002A6F38 /* ViewController.swift */; };
-		ACC624832040F2BF002A6F38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC624812040F2BF002A6F38 /* Main.storyboard */; };
 		ACC624852040F2BF002A6F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC624842040F2BF002A6F38 /* Assets.xcassets */; };
-		ACC624882040F2BF002A6F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC624862040F2BF002A6F38 /* LaunchScreen.storyboard */; };
 		ACC624932040F2C0002A6F38 /* VideoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC624922040F2C0002A6F38 /* VideoAppTests.swift */; };
 		ACC624A4204104B9002A6F38 /* VideoListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC624A3204104B9002A6F38 /* VideoListApi.swift */; };
 		ACC624A6204108AE002A6F38 /* VideoListApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC624A5204108AE002A6F38 /* VideoListApiTest.swift */; };
@@ -20,6 +18,7 @@
 		ACC624AB204177AF002A6F38 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC624A9204177AF002A6F38 /* VideoTableViewCell.swift */; };
 		ACC624AC204177AF002A6F38 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC624AA204177AF002A6F38 /* VideoTableViewCell.xib */; };
 		ACC624AE20417B40002A6F38 /* VideoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC624AD20417B40002A6F38 /* VideoListTableViewController.swift */; };
+		ACD752FF2043F01700B9E462 /* VideoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD752FE2043F01700B9E462 /* VideoTest.swift */; };
 		C16C968A020FEFBB68852B0C /* Pods_VideoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7877D8147D453157ABBC8B24 /* Pods_VideoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +42,7 @@
 		ACC6247A2040F2BF002A6F38 /* VideoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC6247D2040F2BF002A6F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC6247F2040F2BF002A6F38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACC624822040F2BF002A6F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACC624842040F2BF002A6F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ACC624872040F2BF002A6F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC624892040F2BF002A6F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC6248E2040F2C0002A6F38 /* VideoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC624922040F2C0002A6F38 /* VideoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAppTests.swift; sourceTree = "<group>"; };
@@ -56,6 +53,7 @@
 		ACC624A9204177AF002A6F38 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		ACC624AA204177AF002A6F38 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		ACC624AD20417B40002A6F38 /* VideoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListTableViewController.swift; sourceTree = "<group>"; };
+		ACD752FE2043F01700B9E462 /* VideoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +110,7 @@
 			children = (
 				ACC6247D2040F2BF002A6F38 /* AppDelegate.swift */,
 				ACC6247F2040F2BF002A6F38 /* ViewController.swift */,
-				ACC624812040F2BF002A6F38 /* Main.storyboard */,
 				ACC624842040F2BF002A6F38 /* Assets.xcassets */,
-				ACC624862040F2BF002A6F38 /* LaunchScreen.storyboard */,
 				ACC624892040F2BF002A6F38 /* Info.plist */,
 				ACC624A3204104B9002A6F38 /* VideoListApi.swift */,
 				ACC624A720410D81002A6F38 /* Video.swift */,
@@ -131,6 +127,7 @@
 				ACC624922040F2C0002A6F38 /* VideoAppTests.swift */,
 				ACC624942040F2C0002A6F38 /* Info.plist */,
 				ACC624A5204108AE002A6F38 /* VideoListApiTest.swift */,
+				ACD752FE2043F01700B9E462 /* VideoTest.swift */,
 			);
 			path = VideoAppTests;
 			sourceTree = "<group>";
@@ -235,10 +232,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC624882040F2BF002A6F38 /* LaunchScreen.storyboard in Resources */,
 				ACC624AC204177AF002A6F38 /* VideoTableViewCell.xib in Resources */,
 				ACC624852040F2BF002A6F38 /* Assets.xcassets in Resources */,
-				ACC624832040F2BF002A6F38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC624A6204108AE002A6F38 /* VideoListApiTest.swift in Sources */,
+				ACD752FF2043F01700B9E462 /* VideoTest.swift in Sources */,
 				ACC624932040F2C0002A6F38 /* VideoAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,25 +372,6 @@
 			targetProxy = ACC6248F2040F2C0002A6F38 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		ACC624812040F2BF002A6F38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACC624822040F2BF002A6F38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ACC624862040F2BF002A6F38 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACC624872040F2BF002A6F38 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ACC624952040F2C0002A6F38 /* Debug */ = {
@@ -512,6 +489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YNVHMX32EP;
 				INFOPLIST_FILE = VideoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.VideoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,6 +506,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YNVHMX32EP;
 				INFOPLIST_FILE = VideoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.VideoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

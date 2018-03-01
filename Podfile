@@ -6,8 +6,8 @@ target 'VideoApp' do
   use_frameworks!
 
   # Pods for VideoApp
-  pod 'Siesta','1.3.0'
-  pod 'Kingfisher','~> 4.0'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'MobilePlayer'
   
   target 'VideoAppTests' do
     inherit! :search_paths
