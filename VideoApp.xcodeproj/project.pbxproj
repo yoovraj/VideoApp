@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		62EB0628D1B3E560A87E533D /* Pods_VideoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317CB75AF4799873293B1A32 /* Pods_VideoAppTests.framework */; };
 		ACC6247E2040F2BF002A6F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6247D2040F2BF002A6F38 /* AppDelegate.swift */; };
-		ACC624802040F2BF002A6F38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6247F2040F2BF002A6F38 /* ViewController.swift */; };
 		ACC624852040F2BF002A6F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC624842040F2BF002A6F38 /* Assets.xcassets */; };
 		ACC624932040F2C0002A6F38 /* VideoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC624922040F2C0002A6F38 /* VideoAppTests.swift */; };
 		ACC624A4204104B9002A6F38 /* VideoListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC624A3204104B9002A6F38 /* VideoListApi.swift */; };
@@ -41,7 +40,6 @@
 		A8C3B8FE424981D3205CD1CC /* Pods-VideoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoAppTests/Pods-VideoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC6247A2040F2BF002A6F38 /* VideoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC6247D2040F2BF002A6F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACC6247F2040F2BF002A6F38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACC624842040F2BF002A6F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACC624892040F2BF002A6F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC6248E2040F2C0002A6F38 /* VideoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				ACC6247D2040F2BF002A6F38 /* AppDelegate.swift */,
-				ACC6247F2040F2BF002A6F38 /* ViewController.swift */,
 				ACC624842040F2BF002A6F38 /* Assets.xcassets */,
 				ACC624892040F2BF002A6F38 /* Info.plist */,
 				ACC624A3204104B9002A6F38 /* VideoListApi.swift */,
@@ -344,7 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC624802040F2BF002A6F38 /* ViewController.swift in Sources */,
 				ACC624AE20417B40002A6F38 /* VideoListTableViewController.swift in Sources */,
 				ACC624A820410D81002A6F38 /* Video.swift in Sources */,
 				ACC624A4204104B9002A6F38 /* VideoListApi.swift in Sources */,
